@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin | Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Odin | MAKTABAH</title>
 </head>
 <body>
-    
+
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <p class="logo-text">MAKTABAH</p>
+                <hr>
+                <p class="motto">ELITE BOOK PLATFORM</p>
+            </div>
+        </div>
+        <div class="menu">
+            <p>Books</p>
+            <button id="add-btn">Add a book</button>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="form">
+                        <div class="title">
+                            <label for="title">Title of the book :<p class="required-star">(*)</p> </label>
+                            <input type="text" name="title" id="title" placeholder="To Kill a Mockingbird" required>
+                        </div>
+                        <div class="author">
+                            <label for="author">Author of the book :<p class="required-star">(*)</p> </label>
+                            <input type="text" name="author" id="author" placeholder="Harper Lee" required>
+                        </div>
+                        <div class="page-number">
+                            <label for="page-number">Page number :<p class="required-star">(*)</p> </label>
+                            <input type="number" name="page-number" id="page-number" min="0" placeholder="281" required>
+                        </div>
+                        <div class="read-check">
+                            <label for="read-check">Did you read the book? <p class="required-star">(*)</p></label>
+                            <input type="checkbox" name="read-check" id="read" required>
+                        </div>
+                        <button type="submit">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="books">
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
