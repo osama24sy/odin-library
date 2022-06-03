@@ -45,6 +45,7 @@ function updateDisplay() {
             <p class="read">
                 ${element.readCheck?"Read":"Not Read"}
             </p>
+			<button id="change-read" class="${element.readCheck?"did-read":"did-not-read"}">${!element.readCheck?"Read":"Not Read"}</button>
             <button class="remove-btn">Remove</button>
         </div>
 		`
@@ -83,4 +84,15 @@ for (let i = 0; i < removeBtn.length; i++) {
 		localStorage.setItem("library", JSON.stringify(data));
 		updateDisplay();
 	});
+}
+
+const changeRead = document.querySelectorAll("#change-read");
+
+for (let i = 0; i < changeRead.length; i++) {
+	const btn = changeRead[i];
+	btn.addEventListener("click", () => {
+		data[btn.parentElement.id].readCheck = !data[btn.parentElement.id].readCheck;
+		localStorage.setItem("library", JSON.stringify(data));
+		updateDisplay();
+	})
 }

@@ -218,13 +218,15 @@ form > button:hover {
     box-shadow: 26px 2px 117px -61px rgba(0,0,0,0.75);
     -webkit-box-shadow: 26px 2px 117px -61px rgba(0,0,0,0.75);
     -moz-box-shadow: 26px 2px 117px -61px rgba(0,0,0,0.75);
+    gap: 18px;
 }
 
 .book p {
     font-family: "Abril FatFace";
+    margin: 0;
 }
-
-.book > button {
+.did-read,
+.book > button:last-child {
     border: 1px solid rgba(255, 0, 0, 0.60);
     color: rgba(255, 0, 0, 0.60);
     background-color: rgba(255, 142, 142, 0.274);
@@ -234,8 +236,24 @@ form > button:hover {
     font-family: "Gruppo";
     font-weight: bold;
 }
-
-.book > button:hover {
+.did-read:hover,
+.book > button:last-child:hover {
     background-color: rgba(255, 0, 0, 0.60);
     color: rgb(250, 221, 221);
+}
+
+.did-not-read {
+    border: 1px solid rgba(30, 255, 0, 0.6);
+    color: rgba(43, 255, 0, 0.6);
+    background-color: rgba(160, 255, 147, 0.2);
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Gruppo";
+    font-weight: bold;
+}
+
+.did-not-read:hover {
+    background-color: rgba(30, 255, 0, 0.6);
+    color: rgb(224, 250, 221);
 }
